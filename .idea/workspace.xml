@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="605b6320-947f-4d51-af87-eeaa711748c5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/github.com/astaxie/beego/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/astaxie/beego/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/go-sql-driver/mysql/.travis/gofmt.sh" beforeDir="false" afterPath="$PROJECT_DIR$/src/go-sql-driver/mysql/.travis/gofmt.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/go-sql-driver/mysql/.travis/wait_mysql.sh" beforeDir="false" afterPath="$PROJECT_DIR$/src/go-sql-driver/mysql/.travis/wait_mysql.sh" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" path="C:\Go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/src/github.com/prometheus/client_golang" />
+  </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="false" />
+  </component>
+  <component name="ProjectId" id="1Y61T1LTg9eVJ0MEJwda664SFAA" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\lei17\Desktop\GOproject\awesomeProject\src" />
+      <recent name="C:\Users\lei17\Desktop\GOproject\awesomeProject\src\player" />
+      <recent name="C:\Users\lei17\Desktop\GOproject\awesomeProject" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\lei17\Desktop\GOproject\awesomeProject\src\doc" />
+      <recent name="C:\Users\lei17\Desktop\GOproject\awesomeProject\src" />
+      <recent name="C:\Users\lei17\Desktop\GOproject\awesomeProject\src\player" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Go Build.go build 0704.go">
+    <configuration name="go build 0608.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="awesomeProject" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/src/0608.go" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build 0615.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="awesomeProject" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/src/0615.go" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build 0619.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="awesomeProject" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/src/0619.go" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build 0704.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="awesomeProject" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/src/0704.go" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build GetLolDate.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="awesomeProject" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/src/player/GetLolDate.go" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build 0704.go" />
+        <item itemvalue="Go Build.go build 0619.go" />
+        <item itemvalue="Go Build.go build 0608.go" />
+        <item itemvalue="Go Build.go build GetLolDate.go" />
+        <item itemvalue="Go Build.go build 0615.go" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="StructureViewFactory">
+    <option name="AUTOSCROLL_FROM_SOURCE" value="true" />
+    <option name="ACTIVE_ACTIONS" value=",ALPHA_COMPARATOR" />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="545" y="59" key="#Notifications" timestamp="1592192105684">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="545" y="59" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1592192105684" />
+    <state x="507" y="215" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1593740729943">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="507" y="215" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1593740729943" />
+    <state x="954" y="86" key="#go_build_GetLolDate.go" timestamp="1593698272105">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="954" y="86" key="#go_build_GetLolDate.go/0.0.1536.824@0.0.1536.824" timestamp="1593698272105" />
+    <state x="757" y="33" key="#go_build_getdouban.go" timestamp="1592750101784">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="757" y="33" key="#go_build_getdouban.go/0.0.1536.824@0.0.1536.824" timestamp="1592750101784" />
+    <state x="615" y="3" key="#go_build_httpget.go" timestamp="1592639205820">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="615" y="3" key="#go_build_httpget.go/0.0.1536.824@0.0.1536.824" timestamp="1592639205820" />
+    <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1599700711072">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1599700711072" />
+    <state width="870" height="287" key="GridCell.Tab.0.bottom" timestamp="1600674648640">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="870" height="287" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1600674648640" />
+    <state width="870" height="287" key="GridCell.Tab.0.center" timestamp="1600674648640">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="870" height="287" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1600674648640" />
+    <state width="870" height="287" key="GridCell.Tab.0.left" timestamp="1600674648640">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="870" height="287" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1600674648640" />
+    <state width="870" height="287" key="GridCell.Tab.0.right" timestamp="1600674648640">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="870" height="287" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1600674648640" />
+    <state width="1270" height="153" key="GridCell.Tab.1.bottom" timestamp="1592201642211">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1270" height="153" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1592201642211" />
+    <state width="1270" height="153" key="GridCell.Tab.1.center" timestamp="1592201642211">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1270" height="153" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1592201642211" />
+    <state width="1270" height="153" key="GridCell.Tab.1.left" timestamp="1592201642211">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1270" height="153" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1592201642211" />
+    <state width="1270" height="153" key="GridCell.Tab.1.right" timestamp="1592201642211">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1270" height="153" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1592201642211" />
+    <state x="0" y="44" key="SettingsEditor" timestamp="1600670260125">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="0" y="44" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1600670260125" />
+    <state x="289" y="114" width="877" height="616" key="dock-window-1" timestamp="1592745135080">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="289" y="114" width="877" height="616" key="dock-window-1/0.0.1536.824@0.0.1536.824" timestamp="1592745135080" />
+    <state x="673" y="36" width="877" height="616" key="dock-window-2" timestamp="1592745555290">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="673" y="36" width="877" height="616" key="dock-window-2/0.0.1536.824@0.0.1536.824" timestamp="1592745555290" />
+    <state x="572" y="-2" width="877" height="830" key="dock-window-3" timestamp="1592785804241">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="572" y="-2" width="877" height="830" key="dock-window-3/0.0.1536.824@0.0.1536.824" timestamp="1592785804241" />
+    <state x="261" y="146" width="877" height="622" key="dock-window-4" timestamp="1592799198779">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="261" y="146" width="877" height="622" key="dock-window-4/0.0.1536.824@0.0.1536.824" timestamp="1592799198779" />
+    <state x="734" y="146" width="672" height="678" key="search.everywhere.popup" timestamp="1593308978195">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="734" y="146" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1593308978195" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/src/0413.go</url>
+          <line>2</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/src/0413.go</url>
+          <line>3</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/src/0429.go</url>
+          <line>9</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/src/0429.go</url>
+          <line>21</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/src/0509.go</url>
+          <line>16</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/src/0529.go</url>
+          <line>17</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/src/player/getdouban.go</url>
+          <line>33</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/src/player/GetLolDate.go</url>
+          <line>36</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/src/player/localsql.go</url>
+          <line>67</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/hero.html</url>
+          <line>90</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

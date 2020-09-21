@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/jscript" src="js/jquery-3.1.1(1).js" charset="UTF-8" ></script>
+		<script type="text/javascript" src="js/节日.js" ></script>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/qrcode.min.js"></script>
+		<link type="text/css" rel="stylesheet" href="css/fextival.css" />
+		<style type="text/css">
+		*{
+			color: darkgoldenrod;
+			font-family: kaiti;
+		}
+		/*======================新闻主体样式======================*/
+		#body_list{
+			margin-left: 386px;
+			width: 1000px;
+			border: 2px solid #636363;
+			float: left;
+			text-align: center;
+		}
+		.allnews{
+			width: 200px;
+			height: 160px;
+			float: left;
+		}
+		.allimg{
+			border-radius: 3px;
+			width: 180px;
+			height: 120px;
+		}
+			/*//====分类框样式======================================*/
+		#list{
+			text-align: left;
+			width: 1200px;
+			margin-left: 322px;
+			padding-left: 20px;
+			display: block;
+			height: 50px;
+			margin-bottom: 20px;
+		}
+		#list div{
+			height: 60px;
+			text-align: center;
+			width: 100px;
+			display: inline-block;
+			line-height: 60px;
+			font-size: 20px;
+			cursor: pointer;
+			background: url();
+			border-radius: 5px;
+			margin-left: 1px;
+			margin-right: 1px;
+			margin-top: 1px;
+			border: 0px;
+			color: black;
+		}
+		#list div:first-child{
+			border: 1px solid gold;
+			background:#636363 ;
+			margin-left: 0px;
+			margin-right: 0px;
+			margin-top: 0px;
+		}
+		/*二维码css样式========================================================*/
+		#qrcode{
+			/*background-image: url("img/leiou.jpg");*/
+			border: black 4px double;
+			width: 164px;
+			height: 164px;
+			padding-left: 4px;
+			padding-top: 5px;
+			position: fixed;
+			left: 40px; top: 430px;
+			margin-left: 10px;
+			margin-top: 10px
+		}
+		</style>
+	</head>
+	<body style="background: beige;" id="body1" >
+	   			<script type="text/javascript">
+			var joy = $("#body1")
+			var emotion = new Array("(✿◠‿◠)","(͡° ͜ʖ ͡°)"," ≥Ö‿Ö≤ ","(ô‿ô)","≧◠◡◠≦ ","(>‿◠)","☜(ˆ▽ˆ)",
+			"（‐＾▽＾‐）","ᕙ( ＾‿ゝ＾ c)","≧◔◡◔≦ ","≧◉◡◉≦","(¬‿¬)","(─‿‿─)","٩(●̮̃•)۶","\﻿(•◡•)/")
+			joy.click(function client_smotiong(evt){
+				var e = evt || window.event
+				//var times = 10;
+				var x = e.clientX-30 , y = e.clientY +5 ,op = 1,a = 255,b = 145,c = 68;
+				var rand = parseInt(Math.random()*15)
+				var fon = $("<font></font>").html(emotion[rand]).css({"position":"fixed","color":"rgba("+a+","+b+","+c+",1)","font-weight":"900","left": x+"px","top":y+"px","left": x+"px","top":y+"px"})
+				joy.append(fon);
+				var i=0;
+				setInterval(function s(){
+						fon.css({"top":y+1*i+"px"})
+						i++;
+						if(i%10==0)
+							{
+								op = op-0.1
+								fon.css("color","rgba("+a+","+b+","+c+","+op+")")
+							}	
+						if(i==100)
+						{			
+							fon.remove()
+							clearInterval(this)
+						}		
+					},15)
+			})  
+		</script>
+	<!--====================================================================-->
+		<!--==========日历======================================================-->
+		<!--====================================================================-->	
+		<table id='tab'>
+			<tr><td colspan="2" class="td" id="year"> </td><td colspan="2" class="td" id="month"><div id="d1" onclick="chang_left_month()">&lt;</div><div id="d2" onclick="chang_rigth_month()">&gt;</div></td><td colspan="3" class="td" id="time"></td></tr>
+			<tr><td class="td">日</td><td class="td">一</td><td class="td">二</td><td class="td">三</td><td class="td">四</td><td class="td">五</td><td class="td">六</td></tr>
+			<tr><td class="td"></td><td class="td"></td><td class="td"></td><td class="td"></td><td class="td"></td><td class="td"></td><td class="td"></td></tr>
+			<tr><td class="td"></td><td class="td"></td><td class="td"></td><td class="td"></td><td class="td"></td><td class="td"></td><td class="td"></td></tr>
+			<tr><td class="td"></td><td class="td"></td><td class="td"></td><td class="td"></td><td class="td"></td><td class="td"></td><td class="td"></td></tr>
+			<tr><td class="td"></td><td class="td"></td><td class="td"></td><td class="td"></td><td class="td"></td><td class="td"></td><td class="td"></td></tr>
+			<tr><td class="td"></td><td class="td"></td><td class="td"></td><td class="td"></td><td class="td"></td><td class="td"></td><td class="td"></td></tr>
+			<tr><td class="td"></td><td class="td"></td><td class="td"></td><td class="td"></td><td class="td"></td><td class="td"></td><td class="td"></td></tr>
+		</table>
+		<script type="text/javascript">
+			var calendar_body = $("#tab")	
+			var low,col,month_length;
+			var time = new Date()
+		    var year = time.getFullYear()
+		    var month = 1 + time.getMonth()
+			//================================
+			var month_s = month; 
+		    var year_s = year;
+			//===============================
+			$("#year").html(year+"年")
+			$("#month").append(month+"月")	
+			//===============================
+		   
+		    //update new time==================================
+		    setInterval(function(){
+		    	time = new Date()
+		    	var h = time.getHours()
+		    	var min = time.getMinutes()
+		    	var s = time.getSeconds()
+		    	$("#time").html(h+":"+min+":"+s)
+		    },1000)
+		    //==============================================
+		    show_day(year,month);
+		   	function show_day(year1,month1){
+		    	month_length = judge_month_length(year1,month1)
+		    	var i,add,last_month,next_month;
+		    	var day = time.getDate()
+		    	var selec = document.getElementById("tab").getElementsByTagName("td")
+		    	add = CaculateWeekDay(year1,month1,1)
+                //console.log(selec.length)
+		    	//===================================
+		    	last_month_length = judge_month_length(year1,month1-1)
+		    	last_month = judge_month(month1-1)
+		    	next_month = judge_month(month1+1)
+		    	//===================================
+		    	for( i=0;i<10;i++)
+		    	{
+		    		selec[i].style.background = "rgba(255,248,220,0.5)"
+		    	}
+		    	for(i=10;i<add+10;i++)//显示上个月在这个月的首个星期的突出日期
+		    	{
+		    		selec[i].style.background = "rgba(255,255,220,0.1)"
+		    		selec[i].innerHTML= last_month_length-add+i-9
+		    		selec[i].appendChild(document.createTextNode(judge_festival(last_month,last_month_length-add+i-9)))
+		    	}
+		    	for(i=10+add;i<month_length+add+10;i++)
+		    	{
+		    		selec[i].style.background="rgba(255,255,220,1)"
+		    		selec[i].innerHTML= i-9-add
+		    		selec[i].appendChild(document.createTextNode(judge_festival(month1,i-9-add)))
+		    	}
+		    	for(i = month_length+add+10;i<52;i++)//显示下个雪在这个月的最后一个星期的突出日期
+		    	{
+		    		selec[i].style.background = "rgba(255,255,220,0.1) "
+		    		selec[i].innerHTML=i-month_length-add-9
+		    		selec[i].appendChild(document.createTextNode(judge_festival(next_month,i-month_length-add-9)))
+		    	}
+		    	for(i=10;i<52;i++)
+		    	{
+		    		if((i-11)%7==0)
+		    		{
+		    			selec[i-1].style.background = "antiquewhite"
+		    			selec[i+5].style.background = "antiquewhite"
+		    		}
+		    	}
+               if(month1==month)
+		    	{
+		    		selec[day+9+add].style.background="darkorange"   //显示当天日期=============
+		    	}    
+		    }
+		   	//===================================================================
+			//===========月份切换====================================================
+			//===================================================================
+			function chang_left_month(){
+                month_s-=1;
+                if(month_s<1)
+                {
+                	month_s+=12;
+                	year_s-=1;
+                }
+				var month2 = judge_month((month_s));
+			    document.getElementById("month").innerHTML = "<div id='d1' onclick='chang_left_month()'>&lt;</div> <div id='d2'' onclick='chang_rigth_month()'>&gt;</div>"+ month2+'月'
+			    document.getElementById("year").innerHTML = year_s+"年"
+				show_day(year_s,month2);
+			}
+			function chang_rigth_month(){
+				 month_s+=1;
+                if(month_s>12)
+                {
+                	month_s-=12;
+                	year_s+=1;
+                }
+				var month2 = judge_month(month_s);
+				document.getElementById("month").innerHTML = "<div id='d1' onclick='chang_left_month()'>&lt;</div> <div id='d2'' onclick='chang_rigth_month()'>&gt;</div>"+month2+'月'
+				document.getElementById("year").innerHTML = year_s+"年"
+				show_day(year_s,month2);
+			}
+		</script>
+		<!--//===========================================================================================================-->
+		<!--//===========================================================================================================-->
+		<!--//===========================================================================================================-->
+<!--===================================================
+        	                                                                    作者：晖晖                           
+        	                                                                    时间：2020
+        	                                                                    描述：
+====================================================-->
+				<div id="list" align="center" >
+					<div onmouseover="change_page(0)">头条</div>
+					<div onmouseover="change_page(1)">社会</div>
+					<div onmouseover="change_page(2)">国内</div>
+					<div onmouseover="change_page(3)">国际</div>
+					<div onmouseover="change_page(4)">娱乐</div>
+					<div onmouseover="change_page(5)">体育</div>
+					<div onmouseover="change_page(6)">军事</div>
+					<div onmouseover="change_page(7)">科技</div>
+					<div onmouseover="change_page(8)">财经</div>
+					<div onmouseover="change_page(9)">时尚</div>
+				</div>
+{{/*//========================================================================================================================================*/}}
+				<div id="body_list" >
+					{{range .}}
+						<div id="{{.Result.Class}}" class="tab" >
+							{{range .Result.Data}}
+								<div class="allnews" >
+									<a href="{{.Url}}" title="{{.Author_name}}{{.Date}}" ><img class="allimg" src="{{.Thumbnail_pic_s}}"  /></a>
+									<font>{{.Title}}</font>
+								</div>
+							{{end}}
+						</div>
+					{{end}}
+				</div>
+
+				<script>
+				//获取一些必要的父元素=======================
+				var div = document.getElementById("list")
+				var divchild = div.children
+				function change_page(ind){
+				for(var i=0;i<divchild.length;i++){
+					    if(i==ind){
+						hove(i)
+						show_roles(i)
+						}else{
+						hove_no(i)
+						}
+					}
+				}
+				function hove(ind) {
+				divchild[ind].style.cssText = "border: 1px solid black;\n" +
+				"\t\t\tbackground: #636363;\n" +
+				"\t\t\tmargin-left: 0px;\n" +
+				"\t\t\tmargin-right: 0px;\n" +
+				"\t\t\tmargin-top: 0px;"
+				}
+				function hove_no(ind) {
+				divchild[ind].style.cssText = "\t\tbackground: url();\n" +
+				"\t\t\tborder-radius: 5px;\n" +
+				"\t\t\tmargin-left: 1px;\n" +
+				"\t\t\tmargin-right: 1px;\n" +
+				"\t\t\tmargin-top: 1px;\n" +
+				"\t\t\tborder: 0px ;"
+				}
+
+				function show_roles(rol) {
+				var str = ""
+				var str = new Array("top","shehui","guonei","guoji","yule","tiyu","junshi","keji","caijing","shishang")
+				switch(rol){
+				case 0: str = "top"  ;break;
+				case 1: str = "shehui"  ;break;
+				case 2: str = "guonei"  ;break;
+				case 3: str = "guoji"  ;break;
+				case 4: str = "yule"  ;break;
+				case 5: str = "tiyu" ;break;
+				case 6: str = "junshi" ;break;
+				case 7: str = "keji" ;break;
+				case 8: str = "caijing";break;
+				case 9: str = "shishang";break;
+				default: ;
+				}
+					var role  = document.getElementById("body_list").children
+					for(var i=0;i<role.length;i++)
+					{
+						if(i==rol)
+						{
+							role[i].style.display = "block"
+						}else{
+							role[i].style.display = "none"
+						}
+					}
+				}
+				</script>
+				{{/*//二维码====================================================================================*/}}
+				<div id="qrcode" style=""><img src="img/leiou.jpg" style="float: left; position: absolute; left:64px;top: 64px; width: 40px;height: 35px;"></div>
+				<script type="text/javascript">
+				new QRCode(document.getElementById("qrcode"), {text:"https://m.bilibili.com/space/344485144",
+				width : 160,
+				height : 160,
+				background:undefined
+				});  // 设置要生成二维码的链接
+				</script>
+				{{/*//=====================================================================================*/}}
+	</body> 
+</html>     

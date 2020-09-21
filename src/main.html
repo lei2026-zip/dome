@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/jscript" src="js/jquery-3.1.1(1).js" charset="UTF-8" ></script>
+		<script type="text/javascript" src="js/节日.js" ></script>
+		<link type="text/css" rel="stylesheet" href="css/fextival.css" />
+		<style type="text/css">
+		*{
+			color: darkgoldenrod;
+			font-family: kaiti;
+		}
+		button{
+			background: cornsilk;
+		}
+			fieldset#head{
+				height: 250px;
+				border: solid 1px darkgoldenrod ;
+				border-radius:10px ;
+				position: relative;
+				left: 100px;
+				margin-right: 200px;
+				top: 20px;
+			}
+			input#name{
+				position: relative;
+				display: block;
+				width: 82%;
+				height: 40px;
+				border: solid 1px darkgoldenrod;
+				margin-top: 30px;
+				left: 40px;
+				border-radius: 5px;
+				font-size: 16px;
+				text-indent: 20px;
+				background: beige;
+				z-index: 1;
+			}
+			textarea#in{
+				position: relative;
+				height: 120px;
+				width: 82%;
+				left: 40px;
+				border-radius: 5px;
+				position: relative;
+				top: 20px;
+				overflow-x: overlay;
+				overflow-y: auto;
+				background: beige;
+				border: solid 1px darkgoldenrod;
+				z-index: 1;
+			}
+			input#sub{
+				height: 80px;
+				width: 50px;
+				position: absolute;
+				bottom: 30px;
+				right: 6%;
+				cursor: pointer;
+				background: cornsilk;
+				border-bottom-right-radius: 10px;
+				border-top-left-radius: 10px;
+				z-index: 2;
+			}
+			fieldset div#ahead_img{
+				height:70px;
+				width: 70px;
+				position: absolute;
+				top: 30px;
+				right: 5.5%;
+				border: solid 1px sandybrown;
+				border-radius: 35px;
+				z-index: 1;
+			}
+			#comunication_body div#ahead_img{
+				height:70px;
+				width: 70px;
+				float: right;
+				margin-top: -110px;
+				margin-right: 10px;
+				border: solid 1px sandybrown;
+				background-size: 100% 100% ;
+				border-radius: 35px;
+			}
+			
+			fieldset #ahead_img:hover{
+				transform: scale(1.4);
+			}
+			#comunication_body{
+			    border: solid 1px darkgoldenrod ;
+				border-bottom-left-radius: 10px;
+				border-bottom-right-radius: 10px;
+				margin-top: 2px;
+				position: relative;
+				left: 100px;
+				margin-right: 200px;
+				padding-top: 10px;
+			}
+			#bg{
+				width: 80%;
+				border-left: 1px solid darkgoldenrod ;
+				border-right: 1px solid darkgoldenrod ;
+				border-top: 1px solid darkgoldenrod ;
+				position: relative;
+				left: 280px;
+				margin-top: 10px;
+				border-radius: 10px;
+				height: 800px;
+			}
+			div#comment{
+				height: 30px;
+				margin-top: 30px;
+			    border: solid 1px darkgoldenrod ;
+				border-top-left-radius: 10px;
+				border-top-right-radius: 10px;
+				margin-left: 100px;
+				margin-right: 100px;
+			}
+			div#comment span{
+				position: relative;
+				left: 20px;
+				line-height: 30px;
+			}
+			div#comment button{
+				float: right;
+				margin-top: 5px;
+				margin-right:3%;
+				cursor: pointer;
+				background: beige;
+			}
+			div#comunication_body div{
+				margin-left: 10px;
+				margin-bottom: 10px;
+				border-bottom: 1px dashed darkgoldenrod;
+			}
+			div#comunication_body div button{
+			    float: right;
+			    position: relative;
+			    bottom: 30px;
+			    right: 20px;
+			}
+			div#comunication_body h3{
+				line-height: 30px;
+				margin: 0px;
+			}
+		</style>
+	</head>
+	<body style="background: beige;" id="body1" >
+	   			<script type="text/javascript">
+			var joy = $("#body1")
+			var emotion = new Array("(✿◠‿◠)","(͡° ͜ʖ ͡°)"," ≥Ö‿Ö≤ ","(ô‿ô)","≧◠◡◠≦ ","(>‿◠)","☜(ˆ▽ˆ)",
+			"（‐＾▽＾‐）","ᕙ( ＾‿ゝ＾ c)","≧◔◡◔≦ ","≧◉◡◉≦","(¬‿¬)","(─‿‿─)","٩(●̮̃•)۶","\﻿(•◡•)/")
+			joy.click(function client_smotiong(evt){
+				var e = evt || window.event
+				//var times = 10;
+				var x = e.clientX-30 , y = e.clientY +5 ,op = 1,a = 255,b = 145,c = 68;
+				var rand = parseInt(Math.random()*15)
+				var fon = $("<font></font>").html(emotion[rand]).css({"position":"fixed","color":"rgba("+a+","+b+","+c+",1)","font-weight":"900","left": x+"px","top":y+"px","left": x+"px","top":y+"px"})
+				joy.append(fon);
+				var i=0;
+				setInterval(function s(){
+						fon.css({"top":y+1*i+"px"})
+						i++;
+						if(i%10==0)
+							{
+								op = op-0.1
+								fon.css("color","rgba("+a+","+b+","+c+","+op+")")
+							}	
+						if(i==100)
+						{			
+							fon.remove()
+							clearInterval(this)
+						}		
+					},15)
+			})  
+		</script>
+		<!--====================================================================-->
+		<!--==========日历======================================================-->
+		<!--====================================================================-->	
+		<table id='tab'>
+			<tr><td colspan="2" class="td" id="year"> </td><td colspan="2" class="td" id="month"><div id="d1" onclick="chang_left_month()">&lt;</div><div id="d2" onclick="chang_rigth_month()">&gt;</div></td><td colspan="3" class="td" id="time"></td></tr>
+			<tr><td class="td">日</td><td class="td">一</td><td class="td">二</td><td class="td">三</td><td class="td">四</td><td class="td">五</td><td class="td">六</td></tr>
+			<tr><td class="td"></td><td class="td"></td><td class="td"></td><td class="td"></td><td class="td"></td><td class="td"></td><td class="td"></td></tr>
+			<tr><td class="td"></td><td class="td"></td><td class="td"></td><td class="td"></td><td class="td"></td><td class="td"></td><td class="td"></td></tr>
+			<tr><td class="td"></td><td class="td"></td><td class="td"></td><td class="td"></td><td class="td"></td><td class="td"></td><td class="td"></td></tr>
+			<tr><td class="td"></td><td class="td"></td><td class="td"></td><td class="td"></td><td class="td"></td><td class="td"></td><td class="td"></td></tr>
+			<tr><td class="td"></td><td class="td"></td><td class="td"></td><td class="td"></td><td class="td"></td><td class="td"></td><td class="td"></td></tr>
+			<tr><td class="td"></td><td class="td"></td><td class="td"></td><td class="td"></td><td class="td"></td><td class="td"></td><td class="td"></td></tr>
+		</table>
+		<script type="text/javascript">
+			var calendar_body = $("#tab")	
+			var low,col,month_length;
+			var time = new Date()
+		    var year = time.getFullYear()
+		    var month = 1 + time.getMonth()
+			//================================
+			var month_s = month; 
+		    var year_s = year;
+			//===============================
+			$("#year").html(year+"年")
+			$("#month").append(month+"月")	
+			//===============================
+		   
+		    //update new time==================================
+		    setInterval(function(){
+		    	time = new Date()
+		    	var h = time.getHours()
+		    	var min = time.getMinutes()
+		    	var s = time.getSeconds()
+		    	$("#time").html(h+":"+min+":"+s)
+		    },1000)
+		    //==============================================
+		    show_day(year,month);
+		   	function show_day(year1,month1){
+		    	month_length = judge_month_length(year1,month1)
+		    	var i,add,last_month,next_month;
+		    	var day = time.getDate()
+		    	var selec = document.getElementById("tab").getElementsByTagName("td")
+		    	add = CaculateWeekDay(year1,month1,1)
+                //console.log(selec.length)
+		    	//===================================
+		    	last_month_length = judge_month_length(year1,month1-1)
+		    	last_month = judge_month(month1-1)
+		    	next_month = judge_month(month1+1)
+		    	//===================================
+		    	for( i=0;i<10;i++)
+		    	{
+		    		selec[i].style.background = "rgba(255,248,220,0.5)"
+		    	}
+		    	for(i=10;i<add+10;i++)//显示上个月在这个月的首个星期的突出日期
+		    	{
+		    		selec[i].style.background = "rgba(255,255,220,0.1)"
+		    		selec[i].innerHTML= last_month_length-add+i-9
+		    		//selec[i].appendChild(document.createTextNode(judge_festival(last_month,last_month_length-add+i-9)))   //此处用来显示节日
+		    	}
+		    	for(i=10+add;i<month_length+add+10;i++)
+		    	{
+		    		selec[i].style.background="rgba(255,255,220,1)"
+		    		selec[i].innerHTML= i-9-add
+		    		//selec[i].appendChild(document.createTextNode(judge_festival(month1,i-9-add)))
+		    	}
+		    	for(i = month_length+add+10;i<52;i++)//显示下个雪在这个月的最后一个星期的突出日期
+		    	{
+		    		selec[i].style.background = "rgba(255,255,220,0.1) "
+		    		selec[i].innerHTML=i-month_length-add-9
+		    		//selec[i].appendChild(document.createTextNode(judge_festival(next_month,i-month_length-add-9)))
+		    	}
+		    	for(i=10;i<52;i++)
+		    	{
+		    		if((i-11)%7==0)
+		    		{
+		    			selec[i-1].style.background = "antiquewhite"
+		    			selec[i+5].style.background = "antiquewhite"
+		    		}
+		    	}
+               if(month1==month)
+		    	{
+		    		selec[day+9+add].style.background="darkorange"   //显示当天日期=============
+		    	}    
+		    }
+		   	//===================================================================
+			//===========月份切换====================================================
+			//===================================================================
+			function chang_left_month(){
+                month_s-=1;
+                if(month_s<1)
+                {
+                	month_s+=12;
+                	year_s-=1;
+                }
+				var month2 = judge_month((month_s));
+			    document.getElementById("month").innerHTML = "<div id='d1' onclick='chang_left_month()'>&lt;</div> <div id='d2'' onclick='chang_rigth_month()'>&gt;</div>"+ month2+'月'
+			    document.getElementById("year").innerHTML = year_s+"年"
+				show_day(year_s,month2);
+			}
+			function chang_rigth_month(){
+				 month_s+=1;
+                if(month_s>12)
+                {
+                	month_s-=12;
+                	year_s+=1;
+                }
+				var month2 = judge_month(month_s);
+				document.getElementById("month").innerHTML = "<div id='d1' onclick='chang_left_month()'>&lt;</div> <div id='d2'' onclick='chang_rigth_month()'>&gt;</div>"+month2+'月'
+				document.getElementById("year").innerHTML = year_s+"年"
+				show_day(year_s,month2);
+			}
+		</script>
+		<!--//===========================================================================================================-->
+		<!--//===========================================================================================================-->
+		<!--//===========================================================================================================-->
+<!--===================================================
+        	                                                                    作者：晖晖                           
+        	                                                                    时间：2019-12-16  
+        	                                                                    描述：jqury实现聊天界面                 
+====================================================-->
+        <div id="bg">
+        	<h2 align="center" style="color: #B8860B; font-weight: 500;">——  聊天框  ——</h2>
+        	<hr style="height: 20px; background: #DAA520; " />
+        <fieldset id="head">
+        	<legend>发表评论</legend>
+              <form action="" method="" id="myform" >
+		            <input type="text" name="name" id="name" placeholder="请输入用户名，如“王二狗”" required="required" />
+				         <div id="ahead_img"> </div>
+		            <textarea id="in" required="required"></textarea>
+		            <input type="submit" id="sub" value="发送" />
+	          </form>
+        </fieldset>
+	    <div id="comment"><span>评论</span>
+	    	<button id="clear_all">清空信息</button>
+	    </div>
+	        <div id="comunication_body"></div>
+		</div>
+		<!--============================================-->
+		<!--============================================-->
+	     <script>
+	     //============自适应高度============================ 
+	       function body_self_adaption_hei(){   
+	       	  var hei = $(document).height()
+	          var bg = $("#bg")
+	          //console.log(hei)
+	          bg.height(800)
+	          if(hei>800){
+	          	 bg.height(hei)   //更新高度====
+	          }       
+	       }
+	     //========================================
+	        var a = 0,ran=1;   //a用于判断有无记录用 ， ran用于存放切换头像时的ascll码
+	        var addiv;  //用于更新记录时储存新创建的div
+		    var user_name = $("#name")
+		    var user_comment = $("#in")
+		    var myform = $("#myform")
+		    var obj = new Object()
+		    var comment_body = $("#comunication_body")
+		    myform.bind("submit",function (evt){
+		    	var e = evt || window.event
+		    	e.preventDefault()//去除默认事件 
+		    	addcoment()
+		    })
+//		    var new_coment;
+//		    var new_username;
+		    var arrobj = [];
+		    show_local_history();
+		    //========================================================
+		    //========================================================
+		    function addcoment(){	
+                //==========================================================
+                obj = new Object()
+		    	obj.username = user_name.val()
+		    	obj.usercomment = user_comment.val()
+		    	if((obj.usercomment.charCodeAt(0)==10)&&(obj.usercomment.length<=1))
+		    	{
+		    		user_comment.val("")
+		    		return ;
+		    	}
+		    	//=======清除“暂无消息。。。。”===================================
+		    	if(a)
+		    	{
+		    		a = 0
+		    		comment_body.html("")		 
+		    	}   
+		    	//======================================================
+		    	var now = new Date()
+		    	obj.now_time = now.getMonth()+1+"月"+now.getDate()+"日 "+now.getHours()+":"+now.getMinutes()+":"+now.getSeconds();		
+                obj.ahead = ran ;//存放头像记录============================
+		    	//======每条信息记录表=============
+		    	//===================================
+		    	//===================================
+		    	var st;		    	
+		    	addiv = $("<div class='com' ></div>")
+		    	addiv.append($("<h3></h3>").html(obj.username+':'))
+		    	addiv.append($("<p></p>").html(obj.usercomment))
+		    	addiv.append($("<p></p>").html(obj.now_time))
+		    	//================外加头像=========================================
+		    	cut_image2(ran)
+		    	//================================================================
+		    	st = $("<button onclick='removethis(this)' ></button>").html("删除")
+		    	addiv.append(st)
+		    	//=====================================================
+		    	user_comment.val("");    //发送后清空评论发送区=========
+		    	comment_body.prepend(addiv)	    	
+		    	arrobj.unshift(obj)//历史记录数组追加新的聊天记录对象===
+		    	var arrobjstr = JSON.stringify(arrobj)
+		    	localStorage.setItem("jsonhis",arrobjstr)
+		    	///=============================
+		    	body_self_adaption_hei()
+		    }
+		    function show_local_history(){
+		    	var josnstr = localStorage.getItem("jsonhis")
+		    	if(josnstr)
+		    	{  
+                    arrobj = JSON.parse(josnstr)
+		    	   for(var i=0;i<arrobj.length;i++)
+		    	   {
+		    	   	    //======每条信息记录表=============
+		    	   	    addiv = $("<div class='com'></div>")				    	 
+				    	addiv.append($("<h3></h3>").html(arrobj[i].username + ':'))				    	
+				    	addiv.append($("<p></p>").html(arrobj[i].usercomment))
+				    	addiv.append($("<p></p>").html(arrobj[i].now_time))
+				    	//================外加头像==========================================
+			    		cut_image2(arrobj[i].ahead)
+		    	        //=========================================================
+				    	addiv.append($("<button onclick='removethis(this)' ></button>").html("删除"))
+				    	//============================================    	
+				        comment_body.append(addiv)
+				        //==================================================
+				        //======================================
+		    	   }
+		    	}
+		    	else
+		    	{      
+		    		   a = 1
+		    		   comment_body.html('&nbsp;&nbsp;&nbsp;&nbsp;暂无消息......')
+		    	}
+		    	//======================================================================    	 
+		    	body_self_adaption_hei()
+		    } 
+		    //=====================================================================
+		    //===============删除==================================================
+		    //=====================================================================
+		    var clear_all =  $("#clear_all")
+		    	clear_all.bind("click",function clear_all(evt)
+		    	{   //清空记录======================================================
+		    		localStorage.removeItem("jsonhis");
+		    	//	localStorage.setItem("jsonhis",null)
+		    		show_local_history();  //==================刷新=====================
+		    	})
+		    //======================================================================
+		    function removethis(obj){      //======为每个记录单独添加的点击删除事件
+		    	var i=0;                  
+	    		var chi = comment_body.children("div.com")
+	    		var thi = $($(obj)).parent("div")
+	    		//遍历并索引出此记录的位置
+	    	    for(i=0;i<chi.length;i++) //亦可用$("#comunication_body div").each(function(index,element))代替此方法============================
+	    	    {
+	    	    	if(chi[i] == thi[0])
+	    	    	{
+	    	    		break ;
+	    	    	}
+	    	    }	
+	    	    console.log(thi[0])
+	    	    //通过索引的值 i，定位删除此聊天记录
+    		     $("#comunication_body div.com").eq(i).remove()	 
+    		     console.log(chi.length)
+    		     var arr = localStorage.getItem("jsonhis")
+    		     var arr1 = JSON.parse(arr)
+    		     arr1.splice(i,1)
+    		     arr = JSON.stringify(arr1)
+    		     if(arr1=="")
+    		     {
+    		     	 localStorage.removeItem("jsonhis");
+    		     	 show_local_history()
+    		     	 return ;
+    		     }
+    		     localStorage.setItem("jsonhis",arr)
+    		     body_self_adaption_hei()
+		    }
+		    //==============================================================
+		    //========头像切换===============================================
+		    //==============================================================
+		    user_name.bind("change", function cut_image1(){     //用于用户输入用户名后显示相应的头像
+		    	     if(obj.username!=user_name.val())
+		    	{
+		    		var c = user_name.val()
+		    		ran = (c.charCodeAt())%6;   //将输入的用户名转换成ascll码以数字形式在余上6得到6张图中的一张作为专属头像
+		    		console.log(ran)         //==========================
+		    		if(ran==0||ran==5)       //==========================
+		    		{
+		    			$("fieldset #ahead_img").css("background","url(img/"+ran+".png)")
+		    		}
+		    		else{
+		    			$("fieldset #ahead_img").css("background","url(img/"+ran+".jpg)")	    
+		    		}				
+		    		$("fieldset #ahead_img").css("background-size","120px")
+		    	}
+		    })
+		    function cut_image2(ran1){   //用于显示历史记录里的头像记录===============================
+		    	  var st;
+		    		if(ran1==0||ran1==5)
+		    		{
+		    			st = $("<div id='ahead_img'></div>").css("background","url(img/"+ran1+".png)")
+		    		}
+		    		else{
+		    			st = $("<div id='ahead_img' ></div>").css("background","url(img/"+ran1+".jpg)") 	       
+		    		}				
+		    		st.css("background-size","120px")
+		    		 addiv.append(st)	    	
+		    }
+		    // 添加回车快捷方式事件===============================
+		    // =================================================
+		    user_comment.keydown(function(evt){
+		    	var e = evt || window.event;
+		    	//=====trigger==手动触发事件===================
+		    	if(e.keyCode==13)
+		    	{
+		    	    $("#sub").trigger("click")
+		    	}
+		    })
+	     </script>
+	</body> 
+</html>     

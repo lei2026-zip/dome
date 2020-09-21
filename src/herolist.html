@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+
+	<style type="text/css">
+		*{
+			font-family: kaiti ;
+			color: gold ;
+			font-weight: 600 ;
+		}
+		.col td{
+			text-align: center;
+			border: #B8860B solid 1px;
+		}
+		#tab{
+			width: 1200px;
+			padding-left: 2px;
+			padding-top: 2px;
+		}
+		#tab a img{
+			height: 80px;
+			width: 80px;
+			border-radius: 10px;
+		}
+		#tab a img:hover{
+			transform: scale(1.2);
+			box-shadow: 0px 0px 10px black;
+		}
+		#tab div{
+			display: block;
+			width: 100px;
+			height: 120px;
+			text-align: center;
+			float: left;
+		}
+		#list{
+			text-align: left;
+			width: 1200px;
+			padding-left: 20px;
+			display: block;
+			height: 50px;
+			margin-bottom: 20px;
+		}
+		#list div{
+			height: 60px;
+			text-align: center;
+			width: 100px;
+			display: inline-block;
+			line-height: 60px;
+			font-size: 20px;
+			cursor: pointer;
+			background: url();
+			border-radius: 5px;
+			margin-left: 1px;
+			margin-right: 1px;
+			margin-top: 1px;
+			border: 0px;
+			color: gold;
+		}
+		#list div:first-child{
+			border: 1px solid gold;
+			background:#636363 ;
+			margin-left: 0px;
+			margin-right: 0px;
+			margin-top: 0px;
+		}
+		.f{
+			display: none;
+		}
+		#body1{
+		}
+	</style>
+</head>
+<body background="微信图片_20200702191442.png" style=" background-size: 100% 100%; height: 1500px" id="body1 ">
+<script>
+	///只需把body 的id  改成"body1" 在把这段代码复制到其后面即可============
+	///只需把body 的id  改成"body1" 在把这段代码复制到其后面即可============
+	///只需把body 的id  改成"body1" 在把这段代码复制到其后面即可============
+	var joy = document.getElementById("body1")
+	var emotion = new Array("(✿◠‿◠)","(͡° ͜ʖ ͡°)"," ≥Ö‿Ö≤ ","(ô‿ô)","≧◠◡◠≦ ","(>‿◠)","☜(ˆ▽ˆ)",
+			"（‐＾▽＾‐）","ᕙ( ＾‿ゝ＾ c)","≧◔◡◔≦ ","≧◉◡◉≦","(¬‿¬)","(─‿‿─)","٩(●̮̃•)۶","\﻿(•◡•)/")
+	joy.onclick = function client_smotiong(evt){
+		var e = evt || window.event
+		//var times = 10;
+		var x = e.clientX-30
+		var y = e.clientY +5
+		var op = 1;
+		var a = parseInt(Math.random()*255)
+		var b = parseInt(Math.random()*255)
+		var c = parseInt(Math.random()*255)
+		var fon = document.createElement("font")
+		var rand = parseInt(Math.random()*15)
+		rand = document.createTextNode(emotion[rand])
+		fon.appendChild(rand)
+		fon.style.position = "fixed"
+		fon.style.left = x+"px"
+		fon.style.top = y+"px";
+		fon.style.color = "rgba("+a+","+b+","+c+","+1+")"
+		joy.appendChild(fon)
+		fon.style.fontWeight = 900;
+		var i=0;
+		setInterval(function s(){
+			fon.style.top = y+1*i+"px"
+			i++;
+			if(i%10==0)
+			{
+				op = op-0.1
+				fon.style.color = "rgba("+a+","+b+","+c+","+op+")"
+			}
+			if(i==100)
+			{
+				joy.removeChild(fon)
+				clearInterval(this)
+			}
+
+		},15)
+	}
+</script>
+<!--//======================================-->
+<!--//======================================-->
+<!--//======================================-->
+<!--//======================================-->
+<div align="center">
+	<hr/>
+	<font  style="font-weight: 900;font-size: 20px; font-family: kaiti; color:gold" >以下是英雄联盟的所有英雄</font>
+	<hr>
+	<div id="list" align="center" >
+		<div onmouseover="change_page(0)">所有英雄</div>
+		<div onmouseover="change_page(1)">战士</div>
+		<div onmouseover="change_page(2)">法师</div>
+		<div onmouseover="change_page(3)">刺客</div>
+		<div onmouseover="change_page(4)">射手</div>
+		<div onmouseover="change_page(5)">辅助</div>
+	</div>
+	<div style="color: #B8860B;" id="tab">
+			{{range .}}
+				<div>
+					<font class="f">{{.Hero.Roles}}</font>
+					<a href="http://127.0.0.1:8080/herodate?id={{.Hero.Heroid}}" target="_self"><img src = "{{.Hero.Face}}" /></a>
+				    <font>{{.Hero.Title}}</font>
+				</div>
+			{{end}}
+	</div>
+</div>
+<script>
+	//获取一些必要的父元素=======================
+	var div = document.getElementById("list")
+	var divchild = div.children
+	for(var i=0;i<divchild.length;i++){
+		div.children[i].index = i
+	}
+	function change_page(ind){
+		for(var i=0;i<divchild.length;i++){
+			if(i==ind){
+				hove(i)
+				show_roles(i)
+			}else{
+				hove_no(i)
+			}
+		}
+	}
+	function hove(ind) {
+		divchild[ind].style.cssText = "border: 1px solid black;\n" +
+				"\t\t\tbackground: #636363;\n" +
+				"\t\t\tmargin-left: 0px;\n" +
+				"\t\t\tmargin-right: 0px;\n" +
+				"\t\t\tmargin-top: 0px;"
+	}
+	function hove_no(ind) {
+		divchild[ind].style.cssText = "\t\tbackground: url();\n" +
+				"\t\t\tborder-radius: 5px;\n" +
+				"\t\t\tmargin-left: 1px;\n" +
+				"\t\t\tmargin-right: 1px;\n" +
+				"\t\t\tmargin-top: 1px;\n" +
+				"\t\t\tborder: 0px ;"
+	}
+	
+	function show_roles(rol) {
+		var role = document.getElementById("tab").children
+		var str = ""
+		var str2 = ""
+		switch(rol){
+            case 0: break;
+			case 1: str = "战士"  ;break;
+			case 2: str = "法师"  ;break;
+			case 3: str = "刺客"  ;break;
+			case 4: str = "射手"  ;break;
+			case 5: str = "辅助"  ;break;
+			default: ;
+		}
+		for(var i=0;i<role.length;i++){
+			var a = role[i].children
+				str2 = 	a[0].innerHTML
+			 console.log(str2)
+			if(str!=""){
+				if ((str2.indexOf(str))!=-1) {
+					role[i].style.display = "block";
+				} else {
+					role[i].style.display = "none";
+				}
+			}else {
+				role[i].style.display = "block";
+			}
+		}
+	}
+</script>
+</body>
+</html>

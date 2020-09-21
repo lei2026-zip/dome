@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="13da35c3-011d-47fd-bb97-02bbfaf11b48" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" path="C:\Go" />
+  <component name="ProjectId" id="1hIZlBPZx0kooo4Mv4mjI0eiOzY" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../awesomeProject" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\lei17\Desktop\GOproject\headline\html\js" />
+      <recent name="C:\Users\lei17\Desktop\GOproject\headline\html\css" />
+      <recent name="C:\Users\lei17\Desktop\GOproject\headline\html" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\lei17\Desktop\GOproject\headline\html\img" />
+      <recent name="C:\Users\lei17\Desktop\GOproject\headline\html" />
+      <recent name="C:\Users\lei17\Desktop\GOproject\headline\src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Go Build.go build main.go">
+    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="headline" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/src/main.go" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build postdate.go (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="headline" />
+      <working_directory value="$PROJECT_DIR$/../src" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/src/postdate/postdate.go|$PROJECT_DIR$/src/main.go" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build postdate.go (2)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="headline" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/src/postdate/postdate.go" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build postdate.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="headline" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/src/postdate/postdate.go|$PROJECT_DIR$/src/main.go" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build main.go" />
+        <item itemvalue="Go Build.go build postdate.go (2)" />
+        <item itemvalue="Go Build.go build postdate.go (1)" />
+        <item itemvalue="Go Build.go build postdate.go" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="477" y="47" key="#go_build_postdate.go" timestamp="1599716919791">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="477" y="47" key="#go_build_postdate.go/0.0.1536.824@0.0.1536.824" timestamp="1599716919791" />
+    <state x="477" y="47" key="#go_build_postdate.go_(1)" timestamp="1599716979921">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="477" y="47" key="#go_build_postdate.go_(1)/0.0.1536.824@0.0.1536.824" timestamp="1599716979921" />
+    <state x="477" y="47" key="#go_build_postdate.go_(2)" timestamp="1599806790457">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="477" y="47" key="#go_build_postdate.go_(2)/0.0.1536.824@0.0.1536.824" timestamp="1599806790457" />
+    <state x="503" y="165" key="EnvironmentVariablesDialog" timestamp="1599716970616">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="503" y="165" key="EnvironmentVariablesDialog/0.0.1536.824@0.0.1536.824" timestamp="1599716970616" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1600085446358">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1600085446358" />
+    <state width="767" height="2" key="GridCell.Tab.0.bottom" timestamp="1600086917121">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="767" height="2" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1600086917121" />
+    <state width="767" height="2" key="GridCell.Tab.0.center" timestamp="1600086917121">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="767" height="2" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1600086917121" />
+    <state width="767" height="2" key="GridCell.Tab.0.left" timestamp="1600086917121">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="767" height="2" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1600086917121" />
+    <state width="767" height="2" key="GridCell.Tab.0.right" timestamp="1600086917121">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="767" height="2" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1600086917121" />
+    <state x="484" y="0" width="1066" height="490" key="dock-window-1" timestamp="1599918128157">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="484" y="0" width="1066" height="490" key="dock-window-1/0.0.1536.824@0.0.1536.824" timestamp="1599918128157" />
+  </component>
+</project>

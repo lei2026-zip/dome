@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+
+	<style type="text/css">
+		*{
+			font-family: kartika ;
+			color: #B8860B;
+		}
+		input:hover{
+             box-shadow: 0px 0px 10px black;
+		}
+		input{
+			cursor: pointer;
+			background: #B8860B;
+			color: wheat;
+			height: 50px;
+			width: 120px;
+		}
+		.col:nth-child(2){
+			width: 100px;
+
+		}
+		.col td{
+			text-align: center;
+			border: #B8860B solid 1px;
+		}
+		#tab{
+			width: 1200px;
+			border: #B8860B solid 1px;
+		}
+		td{
+			border: #B8860B 1px solid;
+			text-align: center;
+		}
+        #img img{
+			display: none;
+		}
+		#img2 img{
+			display: none;
+		}
+		#img3 img{
+			width: 80px;
+			border-radius: 6px;
+			margin-left: 20px;
+			display: none;
+		}
+		#name font{
+			display: none;
+		}
+		#img img:nth-child(1){
+			display: block;
+		}
+		#img2 img:nth-child(1){
+			display: block;
+		}
+		#img3 img:nth-child(1){
+			display: block;
+		}
+		#name font:nth-child(1){
+			display: inline;
+		}
+	</style>
+</head>
+
+<body style="background: blanchedalmond ;" id="body1">
+<script>
+	///只需把body 的id  改成"body1" 在把这段代码复制到其后面即可============
+	///只需把body 的id  改成"body1" 在把这段代码复制到其后面即可============
+	///只需把body 的id  改成"body1" 在把这段代码复制到其后面即可============
+	var joy = document.getElementById("body1")
+	var emotion = new Array("(✿◠‿◠)","(͡° ͜ʖ ͡°)"," ≥Ö‿Ö≤ ","(ô‿ô)","≧◠◡◠≦ ","(>‿◠)","☜(ˆ▽ˆ)",
+			"（‐＾▽＾‐）","ᕙ( ＾‿ゝ＾ c)","≧◔◡◔≦ ","≧◉◡◉≦","(¬‿¬)","(─‿‿─)","٩(●̮̃•)۶","\﻿(•◡•)/")
+	joy.onclick = function client_smotiong(evt){
+		var e = evt || window.event
+		//var times = 10;
+		var x = e.clientX-30
+		var y = e.clientY +5
+		var op = 1;
+		var a = parseInt(Math.random()*255)
+		var b = parseInt(Math.random()*255)
+		var c = parseInt(Math.random()*255)
+		var fon = document.createElement("font")
+		var rand = parseInt(Math.random()*15)
+		rand = document.createTextNode(emotion[rand])
+		fon.appendChild(rand)
+		fon.style.position = "fixed"
+		fon.style.left = x+"px"
+		fon.style.top = y+"px";
+		fon.style.color = "rgba("+a+","+b+","+c+","+1+")"
+		joy.appendChild(fon)
+		fon.style.fontWeight = 900;
+		var i=0;
+		setInterval(function s(){
+			fon.style.top = y+1*i+"px"
+			i++;
+			if(i%10==0)
+			{
+				op = op-0.1
+				fon.style.color = "rgba("+a+","+b+","+c+","+op+")"
+			}
+			if(i==100)
+			{
+				joy.removeChild(fon)
+				clearInterval(this)
+			}
+
+		},15)
+	}
+</script>
+<!--//======================================-->
+<!--//======================================-->
+<!--//======================================-->
+<!--//======================================-->
+<div>
+	<div style="color: #B8860B;">
+		<table id="tab">
+			<tr>
+				<td colspan="6" id="img">
+					{{range .Skins}}<img src="{{.SourceImg}}" width="1500px"/>{{end}}
+				</td>
+			</tr>
+			<tr>
+				<td colspan="1" rowspan="4" width="312px" id="img2">
+					{{range .Skins}}<img src="{{.LoadingImg}}">{{end}}
+				</td>
+				<td colspan="1" width="100px">图标</td>
+				<td width="120px">名字</td>
+				<td width="120px">定位</td>
+				<td rowspan="2"><input type="button" onclick="last()" value="切换上一张皮肤"><input type="button" onclick="next()" value="切换下一张皮肤"></td>
+			    <td rowspan="3" >{{range .Spells}}<img src="{{.AbilityIconPath}}" style="margin-top: 10px; display: block; margin-left: 100px;"/>{{end}}
+				</td>
+			</tr>
+		<tr style="height:80px;  ">
+			<td style="text-align: center" colspan="1" id="img3">{{range .Skins}}<img src="{{.IconImg}}" >{{end}}</td>
+			<td id="name">{{range .Skins}}<font>{{.Name}}</font>{{end}}</td>
+			{{with .Hero}}
+			<td>{{.Roles}}</td>
+		</tr>
+			<tr>
+				<td width="120px">英雄描述:</td>
+				<td rowspan="1" colspan="3">{{.ShortBio}}</td>
+			</tr>
+			<tr>
+				<td colspan="1" width="120px">敌方对应技巧:</td>
+				<td colspan="1" width="320px">{{.Enemytips}}</td>
+				<td colspan="1" width="120px">己方英雄技巧:</td>
+				<td colspan="1" width="320px">{{.Allytips}}</td>
+				<td height="140px"><form action="http://127.0.0.1:8080/heroSpells?id={{.Heroid}}" method="post"  target="_self"><input type="submit" value="技能详细信息" /></form></td>
+			</tr>
+              {{end}}
+		</table>
+		<form align="center" action="http://127.0.0.1:8080/back" method="get" target="_self" >
+			<input  type="submit" value="返回">
+		</form>
+		<script>
+			var index = 0
+			function next() {
+				var img1 = document.getElementById("img")
+				var img2 = document.getElementById("img2")
+				var img3 = document.getElementById("img3")
+				var name = document.getElementById("name")
+				var lenght = img1.childElementCount
+				var last_index = index
+				if(index>=lenght-1)
+				{
+					index=0
+				}else{
+					index++
+				}
+				child_img1 = img1.children
+				child_img2 = img2.children
+				child_img3 = img3.children
+				child_name = name.children
+				child_img1[last_index].style.display = "none"
+				child_img2[last_index].style.display = "none"
+				child_img3[last_index].style.display = "none"
+				child_name[last_index].style.display = "none"
+				child_img1[index].style.display = "block"
+				child_img2[index].style.display = "block"
+				child_img3[index].style.display = "block"
+				child_name[index].style.display = "inline"
+			}
+			function last() {
+				var img1 = document.getElementById("img")
+				var img2 = document.getElementById("img2")
+				var img3 = document.getElementById("img3")
+				var name = document.getElementById("name")
+				var lenght = img1.childElementCount
+				var last_index = index
+				if(index==0)
+				{
+					index = lenght-1
+				}else{
+					index--
+				}
+				child_img1 = img1.children
+				child_img2 = img2.children
+				child_img3 = img3.children
+				child_name = name.children
+				child_img1[last_index].style.display = "none"
+				child_img2[last_index].style.display = "none"
+				child_img3[last_index].style.display = "none"
+				child_name[last_index].style.display = "none"
+				child_img1[index].style.display = "block"
+				child_img2[index].style.display = "block"
+				child_img3[index].style.display = "block"
+				child_name[index].style.display = "inline"
+			}
+		</script>
+</div>
+</div>
+<embed src="{{with .Hero}}{{.SelectAudio}}{{end}}" width="0px" height="0px"  >
+</body>
+</html>

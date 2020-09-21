@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+
+	<style type="text/css">
+		*{
+			font-family: kartika ;
+			color: #B8860B;
+			opacity: 0.9;
+		}
+		#for{
+			align-content: center;
+			margin-left: 33%;
+			margin-top: 15%;
+		}
+		#for div {
+			background:  #F4A460 space;
+			height: 200px;
+			width: 300px;
+			padding-left: 100px;
+			padding-right: 100px;
+		}
+		input{
+			cursor: pointer;
+			background: #F5F5DC;
+		}
+		#for div span{
+			display: block;
+			float: left;
+			color: chartreuse;
+			width: 40px;
+			margin-right: 20px;
+			font-size: 15px;
+			font-weight: 900;
+			margin-top: 30px;
+		}
+		#for div input:nth-child(2){
+			margin-top: 40px;
+			height: 40px;
+			width: 200px;
+		}
+		#for div input:nth-child(4){
+			margin-top: 20px;
+			height: 40px;
+			width: 80px;
+			font-size:25px ;
+		}
+		#for div input:nth-child(5){
+			height: 40px;
+			width: 80px;
+			font-size:25px ;
+		}
+	</style>
+</head>
+<body style="background: blanchedalmond ;" id="body1">
+<script>
+	///只需把body 的id  改成"body1" 在把这段代码复制到其后面即可============
+	///只需把body 的id  改成"body1" 在把这段代码复制到其后面即可============
+	///只需把body 的id  改成"body1" 在把这段代码复制到其后面即可============
+	var joy = document.getElementById("body1")
+	var emotion = new Array("(✿◠‿◠)","(͡° ͜ʖ ͡°)"," ≥Ö‿Ö≤ ","(ô‿ô)","≧◠◡◠≦ ","(>‿◠)","☜(ˆ▽ˆ)",
+			"（‐＾▽＾‐）","ᕙ( ＾‿ゝ＾ c)","≧◔◡◔≦ ","≧◉◡◉≦","(¬‿¬)","(─‿‿─)","٩(●̮̃•)۶","\﻿(•◡•)/")
+	joy.onclick = function client_smotiong(evt){
+		var e = evt || window.event
+		//var times = 10;
+		var x = e.clientX-30
+		var y = e.clientY +5
+		var op = 1;
+		var a = parseInt(Math.random()*255)
+		var b = parseInt(Math.random()*255)
+		var c = parseInt(Math.random()*255)
+		var fon = document.createElement("font")
+		var rand = parseInt(Math.random()*15)
+		rand = document.createTextNode(emotion[rand])
+		fon.appendChild(rand)
+		fon.style.position = "fixed"
+		fon.style.left = x+"px"
+		fon.style.top = y+"px";
+		fon.style.color = "rgba("+a+","+b+","+c+","+1+")"
+		joy.appendChild(fon)
+		fon.style.fontWeight = 900;
+		var i=0;
+		setInterval(function s(){
+			fon.style.top = y+1*i+"px"
+			i++;
+			if(i%10==0)
+			{
+				op = op-0.1
+				fon.style.color = "rgba("+a+","+b+","+c+","+op+")"
+			}
+			if(i==100)
+			{
+				joy.removeChild(fon)
+				clearInterval(this)
+			}
+
+		},15)
+	}
+</script>
+<!--//======================================-->
+<!--//======================================-->
+<!--//======================================-->
+<!--//======================================-->
+<span>bilibli&nbspbilibli&nbspbilibli&nbspbilibli&nbspbilibli&nbspbilibli&nbspbilibli&nbspbilibli&nbspbilibli&nbspbilibli&nbspbilibli&nbspbilibli&nbspbilibli&nbspbilibli&nbspbilibli&nbspbilibli&nbspbilibli&nbspbilibli&nbspbilibli&nbspbilibli&nbspbilibli&nbspbilibli</span>
+<div>
+	<hr/>
+	<span>以下是获取的电影相关信息</span>
+	<hr/>
+	<div style="color: #B8860B;">
+		{{range .}}
+			<div>{{.Id}}
+				{{.Name}}
+				{{.Score}}
+				{{.Appraiser}}
+				{{.In_all}}
+				{{.Face}}</div>
+		{{end}}
+</div>
+</div>
+
+<script>
+	/*//添加键盘回车快速上传*/
+   var	table = document.getElementById("for")
+	table.keydown(function(evt){
+		var e = evt || window.event;
+		//=====trigger==手动触发事件===================
+		if(e.keyCode==13)
+		{
+			var e = document.createEvent("MouseEvents");
+			e.initEvent("click", true, true);
+			document.getElementById("sub").dispatchEvent(e)
+		}
+	})
+</script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		*{
+			font-family: kartika ;
+			color: cadetblue;
+		}
+		#for{
+			align-content: center;
+			margin-left: 350px;
+			margin-top: 2%;
+		}
+		#for div {
+			/*background:  darkblue space;*/
+			border-radius: 30px;
+			/*border: 1px solid gold;*/
+            text-align: center;
+            width: 400px;
+		}
+		input{
+			border-radius: 5px;
+			cursor: pointer;
+			background: black;
+			border: 1px solid gold;
+			box-shadow: 0px 0px 10px blueviolet;
+		}
+		#for div span{
+			display: block;
+			color: darkgrey;
+			text-shadow: 0px 0px 3px black;
+			text-align: center;
+			font-size: 40px;
+			font-weight: 500;
+			margin-top: 23px;
+		}
+		#for div input:nth-child(2){
+			background: rgba(24,60,107,0.5);
+			font-size: 18px;
+			color: black;
+			font-weight: 500;
+			border: 3px solid black;
+			margin-top: 20px;
+			height: 40px;
+			width: 200px;
+		}
+		#for div input:nth-child(4){
+			  background: rgba(24,60,107,0.5);
+			font-size: 18px;
+			font-weight: 500;
+				border: 3px solid black;
+			margin-top: 10px;
+			height: 40px;
+			width: 200px;
+			margin-left: 3px;
+		}
+		#for div input:nth-child(6){
+			background: rgba(24,60,107,0.5);
+			font-size: 18px;
+			font-weight: 500;
+			border: 3px solid black;
+			margin-top: 10px;
+			height: 40px;
+			width: 200px;
+			margin-left: 3px;
+		}
+		#for div input:hover{
+          box-shadow: 0px 0px 10px black;
+		}
+		#for div input:nth-child(8){
+			margin-top: 20px;
+			background: rgba(0,0,0,0.5);
+			height: 40px;
+			width: 120px;
+			font-size:25px ;
+		}
+		#body1{
+			/*"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1592935655545&di=230770947f137b47cb6129a803ad534c&imgtype=0&src=http%3A%2F%2Fimg.pconline.com.cn%2Fimages%2Fupload%2Fupc%2Ftx%2Fwallpaper%2F1507%2F07%2Fc0%2F9440663_1436278690068.jpg"*/
+			height: 705px;
+			background: url("../20160114093546_wHVeN.thumb.700_0.jpeg");
+			background-size: 100% 100% ;
+		}
+		#im{
+			margin-left: 652px;
+			margin-top: 5%;
+		}
+	</style>
+</head>
+<body id="body1">
+<script>
+</script>
+<!--//======================================-->
+<!--//======================================-->
+<form method="post" action="http://127.0.0.1:8080/input" id="for" target="_self">
+	<div>
+		<span>欢迎注册</span>
+		<input type="text" name="id" id="id" placeholder="请输入你新的的用户名" />
+		<br />
+		<input type="password" name="password" id="Password1" placeholder="请输入你的密码"/>
+		<br />
+		<input type="password"  id="Password2" placeholder="再次输入你的密码"/>
+		<br>
+		<input type="submit" value="确认注册" id="sub" />
+	</div>
+</form>
+<script type="text/javascript">
+	function a(){
+		var name = document.getElementById("id")
+		var Password1 = document.getElementById("Password1")
+		var Password2 = document.getElementById("Password2")
+		if(name.value==""||Password1.value==""||Password2.value=="")
+		{
+			alert("请输入的用户名,和密码")
+		}else if(Password1.value!=Password2.value){
+			alert("两次密码不一致")
+		}
+	}
+	//确保不漏填
+	document.getElementById("sub").addEventListener("mouseover",a)
+
+</script>
+<script>
+	/*//添加键盘回车快速上传*/
+	var	table = document.getElementById("for")
+	table.keydown(function(evt){
+		var e = evt || window.event;
+		//=====trigger==手动触发事件===================
+		if(e.keyCode==13)
+		{
+			var e = document.createEvent("MouseEvents");
+			e.initEvent("click", true, true);
+			document.getElementById("sub").dispatchEvent(e)
+		}
+	})
+</script>
+{{.}}
+</body>
+</html>

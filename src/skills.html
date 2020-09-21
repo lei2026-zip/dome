@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+
+	<style type="text/css">
+		*{
+			font-family: kaiti ;
+			color: grey;
+			font-weight: 400;
+		}
+		span{
+			color: wheat;
+			font-size: 20px;
+		}
+		td:hover{
+			text-shadow: 0px 0px 1px black;
+		}
+		input:hover{
+			box-shadow: 0px 0px 10px black  ;
+		}
+		input{
+			background: #B8860B;
+			color: wheat;
+			height: 50px;
+			width: 100px;
+		}
+		.col:nth-child(2){
+			width: 100px;
+
+		}
+		img:hover{
+			transform: scale(2);
+		}
+		.col td{
+			font-size: 18px;
+			text-align: center;
+			border: #B8860B solid 1px;
+		}
+		hr{
+			border: #B8860B solid 1px;
+		}
+		#tab{
+			background: rgba(225,183,132,0.8);
+			width: 1300px;
+			border: #B8860B solid 1px;
+		}
+		img{
+			border-radius: 3px;
+		}
+		#body1{
+			height: 700px;
+			background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1592935655545&di=230770947f137b47cb6129a803ad534c&imgtype=0&src=http%3A%2F%2Fimg.pconline.com.cn%2Fimages%2Fupload%2Fupc%2Ftx%2Fwallpaper%2F1507%2F07%2Fc0%2F9440663_1436278690068.jpg) ;
+		    background-size: 100% 100%;
+		}
+	</style>
+</head>
+<body id="body1">
+<script>
+	///只需把body 的id  改成"body1" 在把这段代码复制到其后面即可============
+	///只需把body 的id  改成"body1" 在把这段代码复制到其后面即可============
+	///只需把body 的id  改成"body1" 在把这段代码复制到其后面即可============
+	var joy = document.getElementById("body1")
+	var emotion = new Array("(✿◠‿◠)","(͡° ͜ʖ ͡°)"," ≥Ö‿Ö≤ ","(ô‿ô)","≧◠◡◠≦ ","(>‿◠)","☜(ˆ▽ˆ)",
+			"（‐＾▽＾‐）","ᕙ( ＾‿ゝ＾ c)","≧◔◡◔≦ ","≧◉◡◉≦","(¬‿¬)","(─‿‿─)","٩(●̮̃•)۶","\﻿(•◡•)/")
+	joy.onclick = function client_smotiong(evt){
+		var e = evt || window.event
+		//var times = 10;
+		var x = e.clientX-30
+		var y = e.clientY +5
+		var op = 1;
+		var a = parseInt(Math.random()*255)
+		var b = parseInt(Math.random()*255)
+		var c = parseInt(Math.random()*255)
+		var fon = document.createElement("font")
+		var rand = parseInt(Math.random()*15)
+		rand = document.createTextNode(emotion[rand])
+		fon.appendChild(rand)
+		fon.style.position = "fixed"
+		fon.style.left = x+"px"
+		fon.style.top = y+"px";
+		fon.style.color = "rgba("+a+","+b+","+c+","+1+")"
+		joy.appendChild(fon)
+		fon.style.fontWeight = 900;
+		var i=0;
+		setInterval(function s(){
+			fon.style.top = y+1*i+"px"
+			i++;
+			if(i%10==0)
+			{
+				op = op-0.1
+				fon.style.color = "rgba("+a+","+b+","+c+","+op+")"
+			}
+			if(i==100)
+			{
+				joy.removeChild(fon)
+				clearInterval(this)
+			}
+
+		},15)
+	}
+</script>
+<!--//======================================-->
+<!--//======================================-->
+<!--//======================================-->
+<!--//======================================-->
+<div>
+	<hr/>
+	<span>以下是相应英雄的技能信息</span>
+	<hr/>
+	<div style="color: #B8860B;">
+		<table id="tab">
+			<tr  class="col"><td colspan="5" align="center">技能一览</td></tr>
+			<tr  class="col">
+				<td>键位</td>
+				<td>图标</td>
+				<td>名字</td>
+				<td>大概描述</td>
+				<td>动态描述</td>
+			</tr>
+			{{range .Spells}}
+				<tr class="col">
+					<td>{{.SpellKey}}</td>
+					<td><img src="{{.AbilityIconPath}}"></td>
+					<td>{{.Name}}</td>
+					<td>{{.Description}}</td>
+					<td>{{.DynamicDescription}}</td>
+				</tr>
+			{{end}}
+		</table>
+		{{with .Hero}}
+		<form align="center" action="http://127.0.0.1:8080/herodate?id={{.Heroid}}" method="post" >
+			{{end}}
+			<input  type="submit" value="返回">
+		</form>
+</div>
+</div>
+</body>
+</html>
